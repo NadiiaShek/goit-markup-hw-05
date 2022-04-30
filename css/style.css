@@ -16,6 +16,7 @@
 	--border-style: 1px solid #eeeeee;
 	--color-soc-icons: #afb1b8;
 	--animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+	--color-close-modal: #000000;
 }
 
 body {
@@ -473,7 +474,8 @@ header {
 	overflow: hidden;
 }
 
-.item-portfolio {
+.item-portfolio-wrap {
+	position: relative;
 	transition: var(--animation-timing-function);
 }
 
@@ -485,7 +487,6 @@ header {
 }
 
 .item-portfolio-wrap {
-	position: relative;
 	overflow: hidden;
 }
 
@@ -505,7 +506,7 @@ header {
 	overflow: auto;
 }
 
-.item-portfolio-wrap:hover .portfolio-top-text {
+.item-portfolio:hover .portfolio-top-text {
 	transform: translateY(0%);
 }
 .porfolio-border {
@@ -686,4 +687,63 @@ header {
 .social-footer-link:focus {
 	background-color: var(--focus-hover-color);
 	transition: var(--animation-timing-function);
+}
+
+.backdrop {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: opacity var(--animation-timing-function),
+		visibility var(--animation-timing-function);
+}
+.backdrop.is-hidden .modal {
+	transform: scale(0.25) rotate(-290deg);
+}
+
+.modal {
+	width: 528px;
+	height: 581px;
+	background: var(--body-background-color);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+		0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: transform var(--animation-timing-function);
+	transform: translate(-50%, -50%) scale(1) rotate(0);
+}
+
+.modal-close-btn {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: 30px;
+	height: 30px;
+
+	border-radius: 50%;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	background-color: var(--body-background-color);
+}
+
+.close-btn-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.close-modal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	fill: var(--color-close-modal);
+}
+.is-hidden {
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
 }
