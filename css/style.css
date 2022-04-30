@@ -731,11 +731,12 @@ header {
 	background-color: var(--body-background-color);
 }
 
-.close-btn-wrap {
+.close-btn {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+
 .close-modal {
 	display: flex;
 	justify-content: center;
