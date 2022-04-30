@@ -506,7 +506,8 @@ header {
 	overflow: auto;
 }
 
-.item-portfolio:hover .portfolio-top-text {
+.item-portfolio:hover .portfolio-top-text,
+.item-portfolio:focus .portfolio-top-text {
 	transform: translateY(0%);
 }
 .porfolio-border {
