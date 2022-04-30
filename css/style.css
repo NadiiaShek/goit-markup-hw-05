@@ -92,6 +92,10 @@ img {
 	padding-bottom: 32px;
 }
 
+.link-decoration.current {
+	transition: var(--animation-timing-function);
+}
+
 .link-decoration.current::after {
 	position: absolute;
 	bottom: 0;
@@ -102,6 +106,7 @@ img {
 	height: 4px;
 	background-color: var(--focus-hover-color);
 	border-radius: 2px;
+	transition: var(--animation-timing-function);
 }
 
 .header-item:not(:last-child) {
@@ -227,7 +232,7 @@ header {
 	padding: 10px 32px;
 	margin-right: auto;
 	margin-left: auto;
-	transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+	transition: var(--animation-timing-function);
 }
 .hero .button:hover,
 .hero .button:focus {
@@ -296,7 +301,7 @@ header {
 	line-height: 1.16;
 	text-align: center;
 	letter-spacing: 0.03em;
-	color: #212121;
+	color: var(--body-text-color);
 }
 
 .what-we-do {
@@ -328,7 +333,7 @@ header {
 	padding-bottom: 94px;
 	padding-top: 94px;
 
-	background-color: #f5f4fa;
+	background-color: var(--our-team-background-color);
 }
 
 .team .title {
@@ -627,7 +632,7 @@ header {
 .ldfooter:hover,
 .ldfooter:focus {
 	color: var(--focus-hover-color);
-	transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+	transition: var(--animation-timing-function);
 }
 
 .address-block {
