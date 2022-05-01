@@ -90,10 +90,11 @@ img {
 	align-items: center;
 	padding-top: 32px;
 	padding-bottom: 32px;
+	transition: color var(--animation-timing-function);
 }
 
 .link-decoration.current {
-	transition: var(--animation-timing-function);
+	transition: color var(--animation-timing-function);
 }
 
 .link-decoration.current::after {
@@ -106,7 +107,7 @@ img {
 	height: 4px;
 	background-color: var(--focus-hover-color);
 	border-radius: 2px;
-	transition: var(--animation-timing-function);
+	transition: color var(--animation-timing-function);
 }
 
 .header-item:not(:last-child) {
@@ -133,6 +134,7 @@ header {
 .list .link-decoration:hover,
 .list .link-decoration:focus {
 	color: var(--focus-hover-color);
+	transition: color var(--animation-timing-function);
 }
 .list .link-decoration.current {
 	color: var(--focus-hover-color);
@@ -172,7 +174,7 @@ header {
 .ldheder:hover,
 .ldheder:focus {
 	color: var(--focus-hover-color);
-	transition: var(--animation-timing-function);
+	transition: color var(--animation-timing-function);
 }
 
 /* -----------HERO------------*/
@@ -212,17 +214,6 @@ header {
 }
 
 .hero .button {
-	font-family: inherit;
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 1.88;
-	letter-spacing: 0.06em;
-	color: var(--btn-text-color);
-	background-color: var(--btn-background-color);
-	border-radius: 4px;
-}
-
-.hero .button {
 	display: flex;
 	flex-direction: center;
 	justify-content: center;
@@ -232,12 +223,23 @@ header {
 	padding: 10px 32px;
 	margin-right: auto;
 	margin-left: auto;
-	transition: var(--animation-timing-function);
+
+	font-family: inherit;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.88;
+	letter-spacing: 0.06em;
+	color: var(--btn-text-color);
+	background-color: var(--btn-background-color);
+	border-radius: 4px;
+
+	transition: background-color;
 }
+
 .hero .button:hover,
 .hero .button:focus {
 	background-color: var(--btn-background-color2);
-	transition: var(--animation-timing-function);
+	transition: background-color var(--animation-timing-function);
 }
 /* -----------MAIN------------*/
 .benifits-bg {
@@ -402,7 +404,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	fill: var(--color-soc-icons);
-	transition: var(--animation-timing-function);
+	transition: background-color var(--animation-timing-function);
 }
 
 .team-soc-link:hover,
@@ -410,7 +412,7 @@ header {
 	background-color: var(--focus-hover-color);
 	fill: #ffffff;
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-	transition: var(--animation-timing-function);
+	transition: background-color var(--animation-timing-function);
 }
 
 /* -----------PORTFOLIO------------*/
@@ -443,7 +445,7 @@ header {
 	letter-spacing: 0.03em;
 	color: var(--body-text-color);
 	background-color: var(--btn-portfolio-background-color);
-	transition: var(--animation-timing-function);
+	transition: background-color var(--animation-timing-function);
 }
 
 .button-portfolio:hover,
@@ -452,7 +454,7 @@ header {
 	background-color: var(--focus-hover-color);
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
 		0px 2px 2px rgba(0, 0, 0, 0.12);
-	transition: var(--animation-timing-function);
+	transition: background-color var(--animation-timing-function);
 }
 .btn-portfolio-list .btn-active {
 	color: var(--btn-text-color);
@@ -481,14 +483,14 @@ header {
 
 .item-portfolio-wrap {
 	position: relative;
-	transition: var(--animation-timing-function);
+	transition: shadow var(--animation-timing-function);
 }
 
 .item-portfolio:hover,
 .item-portfolio:focus {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
 		1px 4px 6px rgba(0, 0, 0, 0.16);
-	transition: var(--animation-timing-function);
+	transition: shadow var(--animation-timing-function);
 }
 
 .item-portfolio-wrap {
@@ -507,13 +509,13 @@ header {
 	color: var(--second-text-color);
 	background-color: rgba(33, 150, 243, 0.9);
 	transform: translateY(100%);
-	transition: var(--animation-timing-function);
+	transition: transform var(--animation-timing-function);
 	overflow: auto;
 }
 
 .item-portfolio:hover .portfolio-top-text,
 .item-portfolio:focus .portfolio-top-text {
-	transform: translateY(0%);
+	transform: translateY(0%) var(--animation-timing-function);
 }
 .porfolio-border {
 	padding: 20px 24px;
@@ -571,13 +573,13 @@ header {
 	align-items: center;
 	cursor: pointer;
 	fill: var(--color-soc-icons);
-	transition: var(--animation-timing-function);
+	transition: color var(--animation-timing-function);
 }
 .regular-clients-link:hover,
 .regular-clients-link:focus {
 	border: 1px solid var(--focus-hover-color);
 	fill: var(--focus-hover-color);
-	transition: var(--animation-timing-function);
+	transition: color var(--animation-timing-function);
 }
 /* -----------FOOTER------------*/
 .footer {
@@ -627,12 +629,12 @@ header {
 }
 
 .ldfooter {
-	transition: var(--animation-timing-function);
+	transition: background-color var(--animation-timing-function);
 }
 .ldfooter:hover,
 .ldfooter:focus {
 	color: var(--focus-hover-color);
-	transition: var(--animation-timing-function);
+	transition: background-color var(--animation-timing-function);
 }
 
 .address-block {
@@ -686,13 +688,13 @@ header {
 	justify-content: center;
 	align-items: center;
 	fill: #ffffff;
-	transition: var(--animation-timing-function);
+	transition: color var(--animation-timing-function);
 }
 
 .social-footer-link:hover,
 .social-footer-link:focus {
 	background-color: var(--focus-hover-color);
-	transition: var(--animation-timing-function);
+	transition: color var(--animation-timing-function);
 }
 
 .backdrop {
